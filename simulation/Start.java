@@ -2,7 +2,7 @@ package simulation;
 
 public class Start {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         GUI gui = new GUI();
 
         double deltaT = 0.01;
@@ -13,6 +13,7 @@ public class Start {
             Ball.EulerSchritt(deltaT);
             System.out.println("x: " + Ball.get_x() + " y: " + Ball.get_y());
             gui.updateGUI(i);
+            Thread.sleep(10);
         }
     }
 }

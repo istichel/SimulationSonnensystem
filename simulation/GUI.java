@@ -23,10 +23,10 @@ class GUI extends JFrame {
     public void updateGUI(int i) {
         BufferStrategy bufferStrategy = c.getBufferStrategy();
         Graphics graphics = bufferStrategy.getDrawGraphics();
-        graphics.clearRect(0, 0, 100, 100);
+        graphics.clearRect(0, 0, 1000, 1000);
 
         graphics.setColor(Color.GREEN);
-        graphics.drawString("This is some text placed in the top left corner.", i*5, i*15);
+        graphics.drawString("This is some text placed in the top left corner.", i * 5, i * 15);
 
         bufferStrategy.show();
         graphics.dispose();
