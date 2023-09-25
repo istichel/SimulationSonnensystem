@@ -2,6 +2,7 @@ package simulation;
 
 public class Objekt {
     private String name;
+    private double radius;
     private double[] s = new double[2];
     private double[] v = new double[2];
     private double[] a = new double[2];
@@ -10,12 +11,13 @@ public class Objekt {
 
     }
 
-    public Objekt(double[] s_beginn, double[] v_beginn, double[] a_beginn, String n) {
+    public Objekt(double[] s_beginn, double[] v_beginn, double[] a_beginn, String n, double r) {
         for (int i = 0; i < 2; i++) {
             s[i] = s_beginn[i];
             v[i] = v_beginn[i];
             a[i] = a_beginn[i];
         }
+        radius = r;
         name = n;
 
     }
@@ -38,19 +40,23 @@ public class Objekt {
         }
     }
 
-    public double[] get_pos() {
+    public double[] getPos() {
         return s;
     }
 
-    public double get_x() {
+    public double getX() {
         return s[0];
     }
 
-    public double get_y() {
+    public double getY() {
         return s[1];
     }
 
-    public String get_name() {
+    public double getRadius() {
+        return radius;
+    }
+
+    public String getName() {
         return name;
     }
 
